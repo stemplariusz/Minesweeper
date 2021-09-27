@@ -37,12 +37,10 @@ namespace Minesweeper
             if (character.Equals(""))
             {
                 canvas.DrawImage(Bitmap.FromStream(Assembly.GetExecutingAssembly().GetManifestResourceStream("Minesweeper.Model.Images.0.png")), new Point(30 * x + 1, 30 * y + 1));
-                //canvas.DrawImage(Image.FromFile("\\Model\\Images\\0.png"), new Point(30 * x + 1, 30 * y + 1));
             }
             else if (character.Equals("*"))
             {
                 canvas.DrawImage(Bitmap.FromStream(Assembly.GetExecutingAssembly().GetManifestResourceStream("Minesweeper.Model.Images.bomb.png")), new Point(30 * x + 1, 30 * y + 1));
-                //canvas.DrawImage(Image.FromFile("\\Model\\Images\\bomb.png"), new Point(30 * x + 1, 30 * y + 1));
                 DialogResult result = MessageBox.Show("End of game!");
                 if (result == DialogResult.OK)
                 {
@@ -52,7 +50,6 @@ namespace Minesweeper
             else
             {
                 canvas.DrawImage(Bitmap.FromStream(Assembly.GetExecutingAssembly().GetManifestResourceStream("Minesweeper.Model.Images."+character+".png")), new Point(30 * x + 1, 30 * y + 1));
-                //canvas.DrawImage(Image.FromFile("\\Model\\Images\\" + character + ".png"), new Point(30 * x + 1, 30 * y + 1));
             }
         }
 
