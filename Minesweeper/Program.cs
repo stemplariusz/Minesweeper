@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Minesweeper
@@ -9,14 +6,19 @@ namespace Minesweeper
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Minesweeper, author: Kamil Stemplewski
         /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            IView view = new Form1();
+            Model.GameEngine game = new Model.GameEngine(400, 400);
+            Presenter presenter = new Presenter(view, game);
+
+            Application.Run((Form1)view);
         }
     }
 }

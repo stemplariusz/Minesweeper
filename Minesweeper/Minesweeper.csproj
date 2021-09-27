@@ -51,8 +51,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IView.cs" />
+    <Compile Include="Model\GameBoard.cs" />
+    <Compile Include="Model\GameEngine.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,6 +82,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Model\Images\0.png" />
+    <EmbeddedResource Include="Model\Images\1.png" />
+    <EmbeddedResource Include="Model\Images\2.png" />
+    <EmbeddedResource Include="Model\Images\3.png" />
+    <EmbeddedResource Include="Model\Images\4.png" />
+    <EmbeddedResource Include="Model\Images\5.png" />
+    <EmbeddedResource Include="Model\Images\6.png" />
+    <EmbeddedResource Include="Model\Images\7.png" />
+    <EmbeddedResource Include="Model\Images\8.png" />
+    <EmbeddedResource Include="Model\Images\bomb.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
